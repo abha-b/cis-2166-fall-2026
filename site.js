@@ -1,3 +1,11 @@
+document.addEventListener("keydown", (event) => {
+  const scroller = event.target.closest(".table-scroll");
+  if (scroller && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
+    event.preventDefault();
+    scroller.scrollBy({ left: event.key === "ArrowRight" ? 96 : -96 });
+  }
+});
+
 document.addEventListener("click", (event) => {
   const detailsAction = event.target.closest("[data-details-action]");
   if (detailsAction) {
@@ -5,7 +13,9 @@ document.addEventListener("click", (event) => {
     document.querySelectorAll("#materials details.material-group").forEach((detail) => { detail.open = shouldOpen; });
   }
   if (event.target.closest("[data-print-page]")) {
-    document.querySelectorAll("details").forEach((detail) => { detail.open = true; });
+    const cleanUpPrintMode = () => document.body.classList.remove("print-syllabus");
+    document.body.classList.add("print-syllabus");
+    window.addEventListener("afterprint", cleanUpPrintMode, { once: true });
     window.print();
   }
   const emailButton = event.target.closest("[data-reveal-email]");
@@ -14,6 +24,6 @@ document.addEventListener("click", (event) => {
     const output = document.querySelector("[data-email-output]");
     const link = document.createElement("a");
     link.href = "mailto:" + address; link.textContent = address;
-    output.replaceChildren(link); output.hidden = false; emailButton.remove();
+    output.replaceChildren(link); output.hidden = false; emailButton.remove(); link.focus();
   }
 });

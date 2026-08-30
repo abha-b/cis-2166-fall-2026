@@ -2,7 +2,7 @@
 
 Simple, accessible, framework-free course reference site for Temple University Japan.
 
-Students use this site for the syllabus, live timeline, lecture videos, cleared slides, readings, and reference links. Assignments, quizzes, tests, grades, announcements, Zoom, and current deadline changes remain in Canvas.
+Students use this site for the class schedule, syllabus, lecture videos, public slides, readings, and reference links. Assignments, quizzes, tests, grades, announcements, Zoom, and current deadline changes remain in Canvas.
 
 ## Local preview
 
@@ -12,7 +12,7 @@ Serve this directory with any static HTTP server and open `index.html`. No build
 
 Update the source data in `tools/build-sites.mjs`, run the generator, then rerun `tools/qa-sites.mjs` before publishing.
 
-- Live timeline: https://docs.google.com/spreadsheets/d/1rK87a-buparcuGG6Evfx-Du3MWDj6XTC/edit
+- Schedule source: https://docs.google.com/spreadsheets/d/1rK87a-buparcuGG6Evfx-Du3MWDj6XTC/edit
 - Public Drive materials: https://drive.google.com/drive/folders/1T9Fb3HGhs9uXcWBQ2gqFkzNagM4LQxlt
 
 ## Publication safety
