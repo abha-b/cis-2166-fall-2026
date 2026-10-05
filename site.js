@@ -1,10 +1,24 @@
 document.addEventListener("keydown", (event) => {
   const scroller = event.target.closest(".table-scroll");
-  if (scroller && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
+  if (scroller && event.target === scroller && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
     event.preventDefault();
     scroller.scrollBy({ left: event.key === "ArrowRight" ? 96 : -96 });
   }
 });
+
+function openFragment() {
+  let id;
+  try { id = decodeURIComponent(location.hash.slice(1)); }
+  catch { return; }
+  const target = document.getElementById(id);
+  if (!target) return;
+  if (target.matches("details")) target.open = true;
+  for (let ancestor = target.parentElement; ancestor; ancestor = ancestor.parentElement) {
+    if (ancestor.matches("details")) ancestor.open = true;
+  }
+}
+window.addEventListener("hashchange", openFragment);
+openFragment();
 
 document.addEventListener("click", (event) => {
   const detailsAction = event.target.closest("[data-details-action]");
