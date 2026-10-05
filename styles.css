@@ -113,6 +113,8 @@ details:not([open]) > :not(summary) { display: none; }
 .canvas-row h2 { margin-bottom: .5rem; } .canvas-row p { margin-bottom: 0; }
 footer { padding-block: 1.5rem; color: #fff; background: #262d35; }
 footer .wrap { display: flex; justify-content: space-between; gap: 1rem; }
+.course-attribution { padding-block: 1rem; border-top: 1px solid var(--line); font-size: .95rem; overflow-wrap: anywhere; }
+.course-attribution p { margin: 0; }
 @media (max-width: 760px) {
   .header-row span { display: none; }
   .facts, .student-steps, .two-column, .grading-layout, .syllabus-grid { grid-template-columns: 1fr; }
