@@ -38,9 +38,7 @@ dd { margin: .15rem 0 0; }
 .use-content { padding-block: 1.5rem; }
 .use-content h2 { margin-bottom: .35rem; font-size: 1.35rem; }
 .student-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; padding: 0; margin: 1rem 0; list-style: none; counter-reset: steps; }
-.student-steps li { display: grid; grid-template-columns: auto 1fr; gap: 0 .65rem; padding: .8rem; border-left: .25rem solid var(--temple); background: #fff; counter-increment: steps; }
-.student-steps li::before { grid-row: 1 / span 2; content: counter(steps); display: grid; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; color: #fff; background: var(--temple-dark); font-weight: 800; }
-.student-steps a, .student-steps span { grid-column: 2; }
+.student-steps li { display: grid; gap: .25rem; padding: .8rem; border-left: .25rem solid var(--temple); background: #fff; }
 .source-rule { margin-bottom: 0; }
 .section, .section-band { padding-block: clamp(3rem, 6vw, 5rem); scroll-margin-top: 1rem; }
 .section-band { border-block: 1px solid var(--line); background: var(--wash); }
@@ -82,7 +80,7 @@ details:not([open]) > :not(summary) { display: none; }
 .material-extras { max-width: 36rem; margin-bottom: 1rem; }
 .material-extras ul { margin-bottom: 0; }
 .material-group { min-width: 0; border: 1px solid var(--line); background: #fff; }
-.material-group > summary { display: flex; gap: .65rem; align-items: baseline; padding: 1rem; }
+.material-group > summary { display: list-item; padding: 1rem; }
 .material-group > summary span { margin-left: auto; color: var(--muted); font-size: .85rem; font-weight: 600; }
 .material-group[open] > summary { border-bottom: 1px solid var(--line); }
 .details-body { min-width: 0; padding: 1rem; }
