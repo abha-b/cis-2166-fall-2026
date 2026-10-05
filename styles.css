@@ -40,6 +40,11 @@ dd { margin: .15rem 0 0; }
 .student-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; padding: 0; margin: 1rem 0; list-style: none; counter-reset: steps; }
 .student-steps li { display: grid; gap: .25rem; padding: .8rem; border-left: .25rem solid var(--temple); background: #fff; }
 .source-rule { margin-bottom: 0; }
+.topic-section + .topic-section { margin-top: 2rem; }
+.topic-list { list-style: none; padding: 0; }
+.topic-list li { padding-block: .9rem; border-bottom: 1px solid var(--line); }
+.resource-actions { display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; align-items: center; }
+.resource-actions a { display: inline-block; padding-block: .5rem; }
 .section, .section-band { padding-block: clamp(3rem, 6vw, 5rem); scroll-margin-top: 1rem; }
 .section-band { border-block: 1px solid var(--line); background: var(--wash); }
 .two-column, .grading-layout { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(18rem,.75fr); gap: 2rem; align-items: start; }
